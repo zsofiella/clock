@@ -1,0 +1,19 @@
+@font-face {
+ src: url(fonts/Cyberverse.otf);
+ font-family: cyber;
+}
+
+body{
+    background-color: rgb(10,10,10);
+}
+
+.clock {
+    font-family: cyber;
+    color: rgb(10, 206, 255);
+    font-size: 5rem;
+    width: 500px;
+    height: 500px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+}
