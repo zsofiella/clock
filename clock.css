@@ -7,9 +7,14 @@ html {
     background-color:rgb(10,10,10);
 }
 
-.clock-face {
+.clock-face{
     font-family: cyber;
     color: rgb(10, 206, 255);
     font-size: 50px;
+}
 
+.clock{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
