@@ -1,13 +1,18 @@
-'use strict';
+const getCurrentTime=(startTime)=>{
+    const currentDate=startTime ? new Date(startTime) : new Date ();
+    const hours=padNumbers(currentDate.getHours());
+    const minutes=padNumbers(currentDate.getMinutes());
+    const seconds=padNumbers(currentDate.getSeconds());
 
-const clock = document.querySelector('.clock');
+    return `${[hours, minutes, seconds].join(':')}`;
+};
 
-function opentime (){
-    let dateNow = new Date();
-    let time = dateNow.toLocaleTimeString('hu');
-    clock.textContent = time;
+const padNumbers = (num) => {
+    return num < 10 ? `0${num}` : `${num}`;
+};
 
-    setTimeout (openTime, 1000);
-}
-
-openTime();
+setInterval( () => {
+    const time=getCurrentTime();
+    const clockFace=document.querySelector('.clock-face');
+    clockFace.textContent = time;
+}, 1000 );
